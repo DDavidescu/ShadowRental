@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #browse-vehicles-section {
+            height: 80vh;
+            padding: 120px 0px 0px 0px;
+            background-color: black;
+        }
+
+        .browse-vehicles-header {
+            font-size: 2rem;
+            text-align: center;
+            line-height: 1.7;
+            color: white;
+            padding-bottom: 10px;
+        }
+
+        #redirect {
+            font-family: "Oswald", sans-serif;
+            text-transform: uppercase;
+            font-size: 1.5em;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-top: 50px;
+            padding: 20px;
+            text-decoration: none;
+            transition: transform 0.3s ease; 
+            border: none;
+            border-radius: 10px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        #redirect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 0px 30px rgba(0, 123, 255, 0.5);
+        }
+
+        #selected-car-name-header {
+        font-family: "Oswald", sans-serif;
+        font-size: 1.2em;
+        color: rgb(211, 211, 211);
+        border: none;
+        padding: 10px;
+        background-image: linear-gradient(to top, rgb(46, 49, 56), #2c76ff88);
+        border-radius: 10px;
+        }
+
+        .car-showcase-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        }
+
+        .car-list-container span {
+            font-family: "Merriweather", serif;
+            font-size: 1.1rem;
+        }
+
+        .car-showcase-item {
+            text-align: center;
+            padding: 30px;
+            color: #ffffff;
+            width: 100%;
+            border-collapse: separate;
+            border: 1px solid #cccccc;
+            cursor: pointer;
+        }
+ 
+        .car-showcase-image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center;
+            text-align: center; 
+            width: 750px;
+        }
+
+        .car-showcase-image-container img {
+            width: 600px;
+            height: 350px;
+            padding: 15px;
+            background-color: rgb(46, 49, 56);
+        }
+
+        .car-showcase-details-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        border: 2px solid #cccccc;
+        width: 200px;
+    }
+
+    .car-showcase-detail {
+        display: flex;
+        align-items: center;
+        padding: 25px;
+    }
+
+    .car-showcase-detail span {
+        font-family: "Oswald", sans-serif;
+        font-size: 1em;
+        color: white;
+        margin: auto;
+    }
+
+    .car-showcase-detail img {
+        margin-right: 10px;
+    }
+    
+    #date {
+        font-family: "Oswald", sans-serif;
+        font-size: 1.5em;
+        font-weight: 500;
+        border: 2px solid white;
+        background-color: white;
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    #package-selection-section {
+        height: 60vh;
+        background-color: black;
+        padding: 200px 0px 0px 80px;
+    }
+
+    .package-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .package-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 2px solid #4e4e4e;
+        color: white;
+        width: 350px;
+        height: 350px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+        border-radius: 10px; /* Add rounded corners to cards */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .package-card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0px 0px 30px rgba(0, 123, 255, 0.5);
+        border-color: rgb(0, 123, 255);
+    }
+
+    .package-header {
+        font-family: "Merriweather", serif;
+        font-size: 2em;
+        padding: 20px 50px;
+        margin: 0px;
+    }
+
+    .package-requirements {
+        padding: 0px 30px;
+        text-align: center;
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    .package-requirements li {
+        font-family: "Merriweather", serif;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .package-price {
+        font-family: "Oswald", sans-serif;
+        font-size: 2em;
+        padding-bottom: 10px;
+    }
+
+    .package-button {
+        font-family: "PT Sans", sans-serif;
+        font-size: 1em;
+        padding: 10px 20px;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .package-button:hover {
+        background-color: #0056b3;
+    }
+
+
+    </style>
+</head>
+<body>
+    <!-- NAV SECTION -->
+    <nav>
+        <a id="logo-home-link" href="index.html">
+            <div id="logo-img">
+                <img src="./images/logo footer.png" alt="">
+            </div>
+        </a>    
+        <div id="nav-btns">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- BROWSE VEHICLE SECTION-->
+        <section id="browse-vehicles-section">
+            <div class="car-showcase-container">
+                <div class="car-list-container">
+                    <div class="car-showcase-item" data-image="./images/car images/range-rover.png" data-details="2016, 3.0L 249HP, Automatic, 76.900km, Petrol, 5 Seats"><span>Range Rover Sport</span></div>
+                    <div class="car-showcase-item" data-image="./images/car images/bmw-m6-cabrio.png" data-details="2012, 4.3L 560HP, Automatic, 48.240km, Petrol, 4 Seats"><span>BMW M6 Cabrio</span></div>
+                    <div class="car-showcase-item" data-image="./images/car images/cadilac-ats.png" data-details="2017, 3.6L 335HP, Automatic, 78.640km, Petrol, 5 Seats"><span>Cadillac ATS</span></div>
+                    <div class="car-showcase-item" data-image="./images/car images/mercedes-s.png" data-details="2018, 3.0L 286HP, Automatic, 105.320km, Diesel, 5 Seats"><span>Mercedes-Benz S Class</span></div>
+                    <div class="car-showcase-item" data-image="./images/car images/audi-a6.png" data-details="2018, 3.0L 218HP, Manual, 98.500km, Diesel, 5 Seats"><span>Audi A6</span></div>
+                    <div class="car-showcase-item" data-image="./images/car images/bmw-x6.png" data-details="2018, 3.0L 300HP, Automatic, 105.320km, Petrol, 5 Seats"><span>BMW X6</span></div>
+                    <div class="car-showcase-item" data-image="./images/car images/dodge-challanger.png" data-details="2020, 3.6L 309HP, Automatic, 51.200km, Petrol, 4 Seats"><span>Dodge Challanger</span></div>
+                </div>
+        
+                <div class="car-showcase-image-container">
+                    <h2 class="browse-vehicles-header">Ready to embark in your <span id="selected-car-name-header">Range Rover Sport</span></h2>
+                    <img src="./images/car images/range-rover.png" alt="">
+                    <a id="redirect" href="#package-selection-section">Choose your package</a>
+                </div>
+        
+                <div class="car-showcase-details-container">
+                    <div class="car-showcase-detail">
+                        <span id="date">2016</span>
+                    </div>
+                    <div class="car-showcase-detail">
+                        <img src="./images/engine-motor-svgrepo-com.svg" alt="" width="40px">
+                        <span>3.0L 249HP</span>
+                    </div>
+                    <div class="car-showcase-detail">
+                        <img src="./images/gearshift-svgrepo-com.svg" alt="" width="40px">
+                        <span>Automatic</span>
+                    </div>
+                    <div class="car-showcase-detail">
+                        <img src="./images/dashboard-svgrepo-com.svg" alt="" width="40px">
+                        <span>76.900km</span>
+                    </div>
+                    <div class="car-showcase-detail">
+                        <img src="./images/gas-station-svgrepo-com.svg" alt="" width="40px">
+                        <span>Petrol</span>
+                    </div>
+                    <div class="car-showcase-detail">
+                        <img src="./images/person-svgrepo-com.svg" alt="" width="40px">
+                        <span>5 Seats</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHOOSE PACKAGE SECTION-->
+        <section id="package-selection-section">
+            <div class="package-container">
+                <div class="package-card">
+                    <h3 class="package-header">1 Day</h3>
+                    <ul class="package-requirements">
+                        <li>Mileage limit</li>
+                        <li>Security Deposit: Not required</li>
+                        <li>Additional Drivers &#x274C;</li>
+                    </ul>
+                    <span class="package-price" data-price="130">130$</span>
+                    <button class="package-button">Checkout</button>
+                </div>
+                <div class="package-card">
+                    <h3 class="package-header">3 Days</h3>
+                    <ul class="package-requirements">
+                        <li>Mileage limit</li>
+                        <li>Security Deposit: Required</li>
+                        <li>Additional Drivers &check;</li>
+                    </ul>
+                    <span class="package-price" data-price="350">350$</span>
+                    <button class="package-button">Checkout</button>
+                </div>
+                <div class="package-card">
+                    <h3 class="package-header">7 Days</h3>
+                    <ul class="package-requirements">
+                        <li>Unlimited Mileage &check;</li>
+                        <li>Security Deposit: Required</li>
+                        <li>Additional Drivers &check;</li>
+                    </ul>
+                    <span class="package-price" data-price="650">650$</span>
+                    <button class="package-button">Checkout</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <div class="footer-alignment">
+          <div class="footer-img-container">
+            <img src="./images/logo footer.png" alt="">
+          </div>
+  
+  
+          <div class="footer-links-container">
+              <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Lorem</a></li>
+                <li><a  href="">Lorem</a></li>
+                <li><a href="">Lorem</a></li>
+                </ul>
+          </div>
+  
+          <div class="footer-contact-container">
+            <ul>
+                <li>Email: info@example.com</li>
+                <li>Phone: +1234567890</li>
+                <li>Address: 123 Street Name, City, Country</li>
+            </ul>
+          </div>
+  
+          
+  
+          </div>
+  
+          <div class="footer-bottom">
+            <p>&copy; Bau David</p>
+          </div>
+        </footer> 
+
+    <script>
+         document.addEventListener("DOMContentLoaded", function() {
+        const carItems = document.querySelectorAll(".car-showcase-item");
+        const carImage = document.querySelector(".car-showcase-image-container img");
+        const detailSpans = document.querySelectorAll(".car-showcase-details-container .car-showcase-detail span");
+        const packageHeader = document.querySelector(".browse-vehicles-header span");
+
+        carItems.forEach(item => {
+            item.addEventListener("click", function() {
+                carImage.src = this.dataset.image;
+                const details = this.dataset.details.split(", ");
+                detailSpans.forEach((span, index) => {
+                    span.textContent = details[index];
+                });
+
+                const carName = this.querySelector("span").textContent;
+                packageHeader.textContent = carName;
+            });
+        });
+    });
+
+
+        // Get all car showcase items
+    const carShowcaseItems = document.querySelectorAll('.car-showcase-item');
+
+// Add click event listener to each item
+carShowcaseItems.forEach(item => {
+    item.addEventListener('click', function() {
+        // Reset background color of all items
+        carShowcaseItems.forEach(item => {
+            item.style.backgroundImage = 'none';
+        });
+
+        // Set background color of clicked item
+        this.style.backgroundImage = 'linear-gradient(to top, rgb(46, 49, 56), #2c76ff88)';
+    });
+});
+
+
+    </script>
+</body>
+</html>

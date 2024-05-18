@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadowDrive Rentals</title>
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAV SECTION -->
+    <nav>
+        <div id="logo-img">
+            <a id="logo-home-link" href="index.html">
+                <img src="./images/logo footer.png" alt="">
+            </a> 
+        </div>
+        <button class="mobile-menu-button">&#9776; Meniu</button>
+        <div id="nav-btns" class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Lorem</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+    
+    <!-- MAIN SECTION -->
+    <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+    <div class="hero-container">
+        <div class="animation-img">
+            <img src="./images/car images/poza hero.jpg" alt="">
+        </div>
+        <div class="left-side">
+            <div class="hero-content">
+                <h2>Luxury Car Selection</h2>
+                <p>Explore our collection of sleek sports cars and prestigious sedans for a refined travel experience.</p>
+                <a href="browse-vehicles.html" class="btn">Browse Vehicles</a>
+            </div>   
+        </div>
+        <div class="right-side"><img src="./images/car images/poza hero after animation.jpg" alt=""></div>
+    </div>
+    </section>
+    <!-- CARDS SECTION -->
+    <section id="cards-section">
+        <div id="cards-section-flex-container">
+            <div class="card">           
+                <div class="card-container">
+                <img id="card-car-img" src="./images/car-muscle-design-svgrepo-com.svg" alt="Luxury Car">  
+                <h2>Explore Luxury</h2>
+                <p id="first-card-container-p">Browse our exquisite fleet. Detailed descriptions and images help you choose the perfect vehicle.</p>
+                <a href="browse-vehicles.html" class="card-btn">Browse Vehicles</a>
+                </div>
+            </div>
+            
+            <div class="card">            
+                <div class="card-container">
+                <img id="calendar-icon" src="./images/calendar-check-svgrepo-com.svg" alt="Calendar Icon">  
+                <h2 id="calendar-header">Secure Booking</h2>
+                <p id="calendar-p">Check real-time availability and customize your rental. Review comprehensive insurance options for peace of mind.</p>
+                <a href="#" class="card-btn">Lorem</a>
+                </div>
+            </div>
+            
+            <div class="card">      
+                <div class="card-container">
+                <img id="flags-icon" src="./images/racing-flag-2-svgrepo-com.svg" alt="Racing Flags">  
+                <h2>Ready to Roll</h2>
+                <p>Complete your reservation effortlessly online. Receive instant confirmation and prepare for a seamless pickup experience.</p>
+                <a href="#" class="card-btn">Lorem</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOWCASE SECTION -->
+    <section id="showcase-section">
+        <h2 id="showcase-section-header">Popular choices</h2>
+        <h4 id="showcase-section-subheader">Indulge in our exquisite selection of premium vehicles, tailored for your next opulent escapade or executive journey.</h4>
+           <div id="showcase-container">
+             <div class="showcase-item">
+                 <div class="showcase-content">
+                     <div class="name-and-img">
+                      <span class="year">2016</span>
+                         <h4>Range Rover Sport</h4>
+                         <h6>Starting at 130$ / day </h6>
+                         <div class="image-container">
+                          <img src="./images/car images/range-rover.png" alt="" class="main-image">
+                          <img src="./images/car interior/range-rover-interior.jpg" alt="" class="hover-image">
+                        </div>  
+                     </div>
+                     <div class="car-info">
+                         <div class="car-info-right-side">
+                            <img src="./images/engine-motor-svgrepo-com.svg" width="35px" alt="">
+                            <span class="motor-power">3.0L 249HP</span>
+                            <img src="./images/dashboard-svgrepo-com.svg" width="35px" alt="">
+                            <span class="mileage">76.900km</span>
+                         </div>
+                         <div class="car-info-left-side">
+                            <img src="./images/gearshift-svgrepo-com.svg" width="35px" alt="">
+                            <span class="transmission">Automatic</span>
+                            <img src="./images/gas-station-svgrepo-com.svg" width="35px" alt="">
+                            <span class="gas-type">Petrol</span>
+
+                        </div>
+                     </div>
+                 </div>           
+             </div>
+     
+             <div class="showcase-item">
+                 <div class="showcase-content">
+                     <div class="name-and-img">
+                         <span class="year">2012</span>  
+                         <h4>BMW M6 Cabrio</h4>
+                         <h6>Starting at 270$ / day </h6>
+                         <div class="image-container">
+                          <img src="./images/car images/bmw-m6-cabrio.png" alt="" class="main-image">  
+                          <img src="./images/car interior/bmw-m6-cabrio-interior.jpg" alt="" class="hover-image">
+                         </div>  
+                     </div>
+                     <div class="car-info">
+                        <div class="car-info-right-side">
+                           <img src="./images/engine-motor-svgrepo-com.svg" width="35px" alt="">
+                           <span class="motor-power">4.3L 560HP</span>
+                           <img src="./images/dashboard-svgrepo-com.svg" width="35px" alt="">
+                           <span class="mileage">48.240km</span>
+                        </div>
+                        <div class="car-info-left-side">
+                            <img src="./images/gearshift-svgrepo-com.svg" width="35px" alt="">
+                           <span class="transmission">Automatic</span>
+                           <img src="./images/gas-station-svgrepo-com.svg" width="35px" alt="">
+                           <span class="gas-type">Petrol</span>
+                       </div>
+                    </div>
+                 </div>           
+             </div>
+     
+             <div class="showcase-item">
+                 <div class="showcase-content">
+                     <div class="name-and-img">
+                         <span class="year">2017</span>
+                         <h4>Cadilac ATS</h4>
+                         <h6>Starting at 170$ / day </h6>
+                         <div class="image-container">
+                          <img src="./images/car images/cadilac-ats.png" alt="" class="main-image">  
+                          <img src="./images/car interior/cadilac-ats-interior.jpg" alt="" class="hover-image">  
+                         </div>
+                     </div>
+                     <div class="car-info">
+                        <div class="car-info-right-side">
+                            <img src="./images/engine-motor-svgrepo-com.svg" width="35px" alt="">
+                           <span class="motor-power">3.6L 335HP</span>
+                           <img src="./images/dashboard-svgrepo-com.svg" width="35px" alt="">
+                           <span class="mileage">78.640km</span>
+                        </div>
+                        <div class="car-info-left-side">
+                           <img src="./images/gearshift-svgrepo-com.svg" width="35px" alt="">
+                           <span class="transmission">Automatic</span>
+                           <img src="./images/gas-station-svgrepo-com.svg" width="35px" alt="">
+                           <span class="gas-type">Petrol</span>
+                       </div>
+                    </div>
+                 </div>           
+             </div>
+             
+             <div class="showcase-item">
+                 <div class="showcase-content">
+                     <div class="name-and-img">
+                         <span class="year">2018</span>
+                         <h4>Mercedes-Benz S Class</h4>
+                         <h6>Starting at 210$ / day </h6>
+                         <div class="image-container">
+                          <img src="./images/car images/mercedes-s.png" alt="" class="main-image">  
+                          <img src="./images/car interior/mercedes-s-interior.jpg" alt="" class="hover-image">
+                         </div>                  
+                     </div>
+                     <div class="car-info">
+                        <div class="car-info-right-side">
+                           <img src="./images/engine-motor-svgrepo-com.svg" width="35px" alt="">
+                           <span class="motor-power">3.0L 286HP</span>
+                           <img src="./images/dashboard-svgrepo-com.svg" width="35px" alt="">
+                           <span class="mileage">105.320km</span>
+                        </div>
+                        <div class="car-info-left-side">
+                           <img src="./images/gearshift-svgrepo-com.svg" width="35px" alt="">
+                           <span class="transmission">Automatic</span>
+                           <img src="./images/gas-station-svgrepo-com.svg" width="35px" alt="">
+                           <span class="gas-type">Diesel</span>
+                       </div>
+                    </div>
+                 </div>           
+             </div>
+     
+             <div class="showcase-item">
+                 <div class="showcase-content">
+                     <div class="name-and-img">
+                         <span class="year">2018</span>
+                         <h4>Audi A6</h4>
+                         <h6>Starting at 180$ / day </h6>
+                         <div class="image-container">
+                          <img src="./images/car images/audi-a6.png" alt="" class="main-image">    
+                          <img src="./images/car interior/audi-a6-interior.jpg" alt="" class="hover-image">
+                         </div>
+                         
+                     </div>
+                     <div class="car-info">
+                        <div class="car-info-right-side">
+                           <img src="./images/engine-motor-svgrepo-com.svg" width="35px" alt="">
+                           <span class="motor-power">3.0L 218HP</span>
+                           <img src="./images/dashboard-svgrepo-com.svg" width="35px" alt="">
+                           <span class="mileage">98.500km</span>
+                        </div>
+                        <div class="car-info-left-side">
+                           <img src="./images/gearshift-svgrepo-com.svg" width="35px" alt="">
+                           <span class="transmission">Manual</span>
+                           <img src="./images/gas-station-svgrepo-com.svg" width="35px" alt="">
+                           <span class="gas-type">Diesel</span>
+                       </div>
+                    </div>
+                 </div>           
+             </div>
+     
+             <div class="showcase-item">
+                 <div class="showcase-content">
+                     <div class="name-and-img">
+                         <span class="year">2018</span>
+                         <h4>BMW X6</h4>
+                         <h6>Starting at 190$ / day</h6>
+                         <div class="image-container">
+                          <img src="./images/car images/bmw-x6.png" alt="" class="main-image">
+                          <img src="./images/car interior/bmw-x6-interior.jpg" alt="" class="hover-image">
+                         </div>    
+                     </div>
+                     <div class="car-info">
+                        <div class="car-info-right-side">
+                           <img src="./images/engine-motor-svgrepo-com.svg" width="35px" alt="">
+                           <span class="motor-power">3.0L 300HP</span>
+                           <img src="./images/dashboard-svgrepo-com.svg" width="35px" alt="">
+                           <span class="mileage">73.200km</span>
+                        </div>
+                        <div class="car-info-left-side">
+                           <img src="./images/gearshift-svgrepo-com.svg" width="35px" alt="">
+                           <span class="transmission">Automatic</span>
+                           <img src="./images/gas-station-svgrepo-com.svg" width="35px" alt="">
+                           <span class="gas-type">Petrol</span>
+                       </div>
+                    </div>
+                 </div>           
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+
+     <!-- LOCATION SECTION -->
+     <section class="location-section">
+      <div class="location-info slide-in">
+        <h3>Location Name</h3>
+        <p>Address: 123 Street Name, City, Country</p>
+        <p>Contact Information: +4071237901, shadowdrive@email.com</p>
+        <p>Operating Hours: Monday-Saturday, 9:00 AM - 6:00 PM</p>
+        <div class="location-section-buttons">
+          <button id="button-mail-location-section">Contact</button>
+        </div>     
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1384.106063726396!2d26.10209209762484!3d44.42645590080612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff88644160af%3A0xafe2420b55c9bc77!2sBucharest%20Fountains!5e0!3m2!1sen!2sro!4v1711669491136!5m2!1sen!2sro&maptype=satellite"  
+          width="700" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+     </section>
+
+     <hr class="more-info-divider">
+    <!-- MORE INFO SECTION -->
+    <section class="more-info-section">
+        <div class="more-info-img-container">
+          <img id="more-info-img" src="./images/blacksportscar.avif" alt="">
+        </div> 
+        <div class="more-details">
+          <div class="more-details-card">
+            <img src="./images/discount-svgrepo-com.svg" alt="" width="60px">
+            <h3>Special Offers</h3>
+            <p>Discover exclusive deals and promotions for our customers.</p>
+            <a href="browse-vehicles.html">See more</a>
+          </div>
+          <div class="more-details-card">
+            <img src="./images/faq-svgrepo-com.svg" alt="" width="60px">
+            <h3>FAQs</h3>
+            <p>Find answers to commonly asked questions about our company and services.</p>
+            <a>View</a>
+          </div>
+        </div>   
+      </section>
+
+    <!-- REVIEW SECTION -->
+     <section class="review-section">
+        <h2>Our Reviews</h2>
+        <div class="review-cards">
+        <div class="review">
+            <p class="reviewer-name">John Doe</p>
+            <p class="review-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+            <p class="review-date">March 25, 2024</p>
+            <div class="star-rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+            </div>
+        </div>
+        <div class="review">
+            <p class="reviewer-name">Jane Smith</p>
+            <p class="review-content">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+            <p class="review-date">March 24, 2024</p>
+            <div class="star-rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+            </div>
+        </div>
+        <div class="review">
+            <p class="reviewer-name">Rick Braum</p>
+            <p class="review-content">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+            <p class="review-date">March 24, 2024</p>
+            <div class="star-rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+            </div>
+        </div>
+        </div>
+     </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div class="footer-alignment">
+        <div class="footer-img-container">
+          <img src="./images/logo footer.png" alt="">
+        </div>
+
+
+        <div class="footer-links-container">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="">Lorem</a></li>
+              <li><a  href="">Lorem</a></li>
+              <li><a href="">Lorem</a></li>
+              </ul>
+        </div>
+
+        <div class="footer-contact-container">
+          <ul>
+              <li>Email: info@example.com</li>
+              <li>Phone: +1234567890</li>
+              <li>Address: 123 Street Name, City, Country</li>
+          </ul>
+        </div>
+        </div>
+
+      </footer> 
+        <div class="footer-bottom">
+            <p>&copy; Bau David</p>
+        </div>
+
+
+
+    <!-- SCRIPT -->
+    <script defer src="script.js"></script>
+</body>
+</html>
